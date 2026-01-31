@@ -2,7 +2,11 @@
 
 :root {
   --background: #ffffff;
+<<<<<<< HEAD
   --foreground: #ffffff;
+=======
+  --foreground: #171717;
+>>>>>>> 20803c5d3dfb09e637e0c7bb706b324d29219536
 }
 
 @theme inline {
