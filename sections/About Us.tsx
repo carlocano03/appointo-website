@@ -5,7 +5,7 @@ import { Facebook, Twitter, Instagram } from "lucide-react";
 
 const AboutSection: React.FC = () => {
   return (
-    <section className="bg-white py-16 px-6 md:px-12 lg:px-20">
+    <section className="bg-white py-16 px-6 md:px-12 lg:px-20" id="about">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2  gap-12 items-center ">
           <div className="space-y-6 order-2 lg:order-1">
@@ -27,21 +27,21 @@ const AboutSection: React.FC = () => {
             <div className="flex gap-4 pt-4">
               <a
                 href="#"
-                className="text-black hover:text-red-700 transition-colors"
+                className="text-black hover:text-indigo-700 transition-colors"
                 aria-label="Facebook"
               >
                 <Facebook size={20} />
               </a>
               <a
                 href="#"
-                className="text-black hover:text-red-700 transition-colors"
+                className="text-black hover:text-indigo-700 transition-colors"
                 aria-label="Twitter"
               >
                 <Twitter size={20} />
               </a>
               <a
                 href="#"
-                className="text-black hover:text-red-700 transition-colors"
+                className="text-black hover:text-indigo-700 transition-colors"
                 aria-label="Instagram"
               >
                 <Instagram size={20} />
@@ -51,13 +51,14 @@ const AboutSection: React.FC = () => {
 
           {/* Right Image */}
           <div className="relative order-1 lg:order-2">
-            <div className="relative h-[400px] md:h-[500px] rounded-lg overflow-hidden">
+            <div className="relative h-100 md:h-125 rounded-lg overflow-hidden">
               <Image
                 src="/images/teams.jpg"
                 alt="Professional working on laptop"
                 fill
                 className="object-cover"
                 priority
+                sizes="(max-width: 768px) 90vw, (max-width: 1200px) 90vw, 90vw"
               />
             </div>
           </div>

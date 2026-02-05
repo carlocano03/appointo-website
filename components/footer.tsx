@@ -1,9 +1,10 @@
 import React from "react";
 import { Mail, Phone, MapPin } from "lucide-react";
+import { navItems, services } from "@/lib/constants";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#0a0a0a] text-gray-300 py-12 px-6 md:px-12 lg:px-20">
+    <footer className="bg-linear-to-r from-gray-900 via-gray-800 to-indigo-1000 text-gray-300 py-12 px-6 md:px-12 lg:px-20">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           <div className="space-y-6">
@@ -93,76 +94,28 @@ const Footer = () => {
               Quick Links
             </h3>
             <ul className="space-y-3">
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-white text-sm transition-colors"
-                >
-                  Home
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-white text-sm transition-colors"
-                >
-                  About us
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-white text-sm transition-colors"
-                >
-                  Features
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-white text-sm transition-colors"
-                >
-                  Contact
-                </a>
-              </li>
+              {navItems.map((item) => (
+                <li key={item.name}>
+                  <a
+                    href={item.href}
+                    className="text-gray-400 hover:text-white text-sm transition-colors"
+                  >
+                    {item.name}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
-
           <div className="hidden md:block">
             <h3 className="text-white text-sm font-semibold mb-4">Services</h3>
             <ul className="space-y-3">
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-white text-sm transition-colors"
-                >
-                  Branding
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-white text-sm transition-colors"
-                >
-                  Design
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-white text-sm transition-colors"
-                >
-                  Marketing
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-white text-sm transition-colors"
-                >
-                  Advertisment
-                </a>
-              </li>
+              {services.map((item) => (
+                <li key={item.name}>
+                  <a className="text-gray-400 hover:text-white text-sm transition-colors">
+                    {item.name}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 

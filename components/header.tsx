@@ -2,7 +2,8 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react"; // Make sure lucide-react is installed
-import navItems from "@/lib/constants";
+import { navItems } from "@/lib/constants";
+import { GetStartedButton } from "../components/ui/CTAbtns";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,7 +14,7 @@ export default function Header() {
         <div className="flex justify-between h-16">
           {/* Logo */}
           <div className="shrink-0 flex items-center">
-            <Link href="/" className="text-indigo-600 font-bold text-xl ">
+            <Link href="/" className="text-indigo-600 font-bold text-xl">
               Appointo
             </Link>
           </div>
@@ -31,17 +32,12 @@ export default function Header() {
             ))}
           </div>
 
-          {/* Right buttons */}
+          {/* Right btns */}
           <div className="hidden md:flex items-center space-x-4">
-            <Link
-              href="/get-started"
-              className="bg-indigo-600 text-white px-4 py-2 rounded-md text-sm font-medium  transition-colors duration-300  hover:bg-orange-700 hover:pointer hover:shadow-lg"
-            >
-              Get Started
-            </Link>
+            <GetStartedButton />
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Btn */}
           <div className="flex items-center md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -66,12 +62,7 @@ export default function Header() {
                 {item.name}
               </Link>
             ))}
-            <Link
-              href="/get-started"
-              className="block bg-indigo-600 text-white px-3 py-2 rounded-md text-base font-medium hover:bg-indigo-700 transition-colors duration-300"
-            >
-              Get Started
-            </Link>
+            <GetStartedButton />
           </div>
         </div>
       )}

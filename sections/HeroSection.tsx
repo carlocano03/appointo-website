@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import { GetStartedButton } from "../components/ui/CTAbtns";
 
 export default function HeroSection() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -24,8 +25,8 @@ export default function HeroSection() {
   }, [backgroundImages.length]);
 
   return (
-    <section className="relative h-screen w-full overflow-hidden">
-      {/* Background Images with Fade Transition */}
+    <section className="relative h-screen w-full overflow-hidden" id="home">
+      {/* Background Images */}
       {backgroundImages.map((image, index) => (
         <div
           key={index}
@@ -61,9 +62,7 @@ export default function HeroSection() {
               Turning your vision into reality, one project at a time.
             </p>
 
-            <button className="bg-indigo-600 px-8 py-4 text-lg font-semibold text-white transition-all duration-300 hover:bg-orange-700 hover:shadow-lg hover:pointer">
-              Get Started
-            </button>
+            <GetStartedButton />
           </div>
         </div>
       </div>
