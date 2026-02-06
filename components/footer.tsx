@@ -4,7 +4,7 @@ import { navItems, services } from "@/lib/constants";
 
 const Footer = () => {
   return (
-    <footer className="bg-linear-to-r from-gray-900 via-gray-800 to-indigo-1000 text-gray-300 py-12 px-6 md:px-12 lg:px-20">
+    <footer className="bg-black text-gray-300 py-12 px-6 md:px-12 lg:px-20">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           <div className="space-y-6">

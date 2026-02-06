@@ -20,7 +20,7 @@ export default function TestimonialsSection() {
       if (rightColumn) {
         rightColumn.scrollTop = rightColumn.scrollHeight / 2;
       }
-    }, 50);
+    }, 100);
 
     const startScrolling = () => {
       intervalId = setInterval(() => {
@@ -37,7 +37,7 @@ export default function TestimonialsSection() {
             rightColumn.scrollTop = rightColumn.scrollHeight / 2;
           }
         }
-      }, 20);
+      }, 30);
     };
 
     setTimeout(startScrolling, 100);
